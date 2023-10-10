@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct AI_ARTApp: App {
+//    @StateObject var dataModel = ImageDataModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+
         }
     }
 }
