@@ -17,7 +17,7 @@ struct Item: Identifiable {
         self.folder = folder
         self.isTF = isTF
         self.style = style
-        self.url = isTF ? "http://103.4.146.170:8001/api/cartoonify/" : "http://103.4.146.170:8002/api/cartoonify/"
+        self.url = isTF ? "http://172.23.1.197:8001/api/cartoonify/" : "http://172.23.1.197:8002/api/cartoonify/"
     }
     
     let id = UUID()

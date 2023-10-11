@@ -13,11 +13,10 @@ struct ImageCropView: View {
     @Binding var isShowingPhotoPicker:Bool
     var jsonData: JsonData
     var urlString:String
-    @State private var isActive:Bool = false
-    @State var outputImageUrl:String?
+    
     var body: some View {
         
-        NavigationStack{
+        NavigationView{
             
             VStack{
                 Spacer()
@@ -34,14 +33,9 @@ struct ImageCropView: View {
                 Button{
                     if let selectedImageData ,let uiImage = UIImage(data: selectedImageData){
                         print(urlString)
-                        isActive = true
-                        sendAPIPostRequest(json: jsonData, image: uiImage, urlString: urlString){ url in
-                            outputImageUrl = url
-                        }
+                        sendAPIPostRequest(json: jsonData, image: uiImage, urlString: urlString)
                         
                     }
-                   
-                    
                 }label: {
                     Text("Generate")
                         .fontWeight(.heavy)
@@ -50,15 +44,10 @@ struct ImageCropView: View {
                         .frame(width: 250,height: 50)
                         .background(Color.blue.opacity(1.5))
                         .cornerRadius(12)
-                   
+                    
                 }
                 Spacer(minLength: 5)
                 
-             
-                
-            }
-            .navigationDestination(isPresented: $isActive){
-                DownloadView(url: $outputImageUrl)
             }
             
             .toolbar{
@@ -86,7 +75,7 @@ struct ImageCropView: View {
 }
 
 
-func sendAPIPostRequest(json: JsonData, image: UIImage ,urlString: String, completion: @escaping (String?) -> Void)  {
+func sendAPIPostRequest(json: JsonData, image: UIImage ,urlString: String) {
 
     
     print("Your image is on processing....Please wait a moment...!")
@@ -152,33 +141,16 @@ func sendAPIPostRequest(json: JsonData, image: UIImage ,urlString: String, compl
             return
         }
         if let response = response as? HTTPURLResponse {
-
             print("Response status code: \(response.statusCode)")
-            if response.statusCode == 400{
-                completion("https://as2.ftcdn.net/v2/jpg/00/89/55/15/1000_F_89551596_LdHAZRwz3i4EM4J0NHNHy2hEUYDfXc0j.jpg")
-            }
         }
         
-//        if let data = data, let dataString = String(data: data, encoding: .utf8) {
-//            print("Response data string:\n \(dataString)")
-//
-//        }
-        if let data = data {
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                if let error = json["Error"] {
-                    return
-                }
-                let downloadLink = json["Download link"] as! String
-                
-                print(json["Download link"] as! String)
-                completion(downloadLink)
-            } catch {
-                print(error)
-            }
+        if let data = data, let dataString = String(data: data, encoding: .utf8) {
+            print("Response data string:\n \(dataString)")
         }
     }
     task.resume()
+    
+    
 }
 
 
@@ -195,6 +167,6 @@ func sendAPIPostRequest(json: JsonData, image: UIImage ,urlString: String, compl
 
 struct ImageCropView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageCropView(selectedImageData: .constant(nil), isPresenting: .constant(false), isShowingPhotoPicker: .constant(false), jsonData: JsonData(folder: "", style: ""), urlString: "", outputImageUrl: "")
+        ImageCropView(selectedImageData: .constant(nil), isPresenting: .constant(false), isShowingPhotoPicker: .constant(false), jsonData: JsonData(folder: "", style: ""), urlString: "")
     }
 }
