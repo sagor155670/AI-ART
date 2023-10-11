@@ -34,11 +34,42 @@ class DataModel: ObservableObject {
         Item(beforeImage: "lady", afterImage: "DCT-Net sd-design", title: "HolyLand", width: 120, height: 140, folder: "DCT-Net", isTF: true, style: "sd-design"),
         Item(beforeImage: "lady", afterImage: "DCT-Net sd-illustration", title: "HolyLand", width: 120, height: 140, folder: "DCT-Net", isTF: true, style: "sd-illustration"),
         
+        
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_adv_Kpop", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "adv_Kpop"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Arcane_46", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Arcane_46"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Disney_v1.5", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Disney_v1.5"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Disney_v1.7", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Disney_v1.7"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Disney_v1.9", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Disney_v1.9"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Hayao_36", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Hayao_36"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Kpop", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Kpop"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_large_Kpop", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "large_Kpop"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_light_Arcane", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "light_Arcane"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_light_comic_99", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "light_comic_99"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_light_Comic", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "light_Comic"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_light_Nordic_myth1", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "light_Nordic_myth1"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_light_Nordic_myth2", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "light_Nordic_myth2"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_light_USA", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "light_USA"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_light_USA2", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "light_USA2"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Shinkai", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Shinkai"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_Arcane", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "tiny_Arcane"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_Comic", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "tiny_Comic"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_Nordic_myth1", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Nordic_myth1"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_Nordic_myth2", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "tiny_Nordic_myth2"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_USA", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "tiny_USA"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_USA2", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "tiny_USA2"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Trump_v1.5", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Trump_v1.5"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Trump_v1.6", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Trump_v1.6"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Trump_v1.7", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Trump_v1.7"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Trump_v1.8", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Trump_v1.8"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Trump_v1.9", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Trump_v1.9"),
+        
+        
+        
     ]) {
         self.slider = slider
         self.isScaled = isScaled
         self.mockData = mockData
-        self.folders = ["StyleGANEX","VToonify_T","CartoonGan-tensorflow","DCT-Net","iNNfer"]
+        self.folders = ["AnimeGANv3","StyleGANEX","VToonify_T","CartoonGan-tensorflow","DCT-Net","iNNfer"]
     }
     
     

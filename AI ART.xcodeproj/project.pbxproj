@@ -9,8 +9,54 @@
 /* Begin PBXBuildFile section */
 		1C0F97052AC2D9B500FEFF15 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0F97042AC2D9B500FEFF15 /* DataModel.swift */; };
 		1C5827C32AC19628009BEE2F /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5827C22AC19628009BEE2F /* ImageSliderView.swift */; };
+		1C667DEB2AD69445001CCD2D /* ModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DEA2AD69445001CCD2D /* ModelHandler.swift */; };
+		1C667DFE2AD6AEA6001CCD2D /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DED2AD6AEA6001CCD2D /* Array+Extensions.swift */; };
+		1C667DFF2AD6AEA6001CCD2D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DEE2AD6AEA6001CCD2D /* Math.swift */; };
+		1C667E002AD6AEA6001CCD2D /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DEF2AD6AEA6001CCD2D /* UIImage+CVPixelBuffer.swift */; };
+		1C667E012AD6AEA6001CCD2D /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DF02AD6AEA6001CCD2D /* Predictions.swift */; };
+		1C667E022AD6AEA6001CCD2D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DF12AD6AEA6001CCD2D /* UIImage+Extensions.swift */; };
+		1C667E032AD6AEA6001CCD2D /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DF22AD6AEA6001CCD2D /* CGImagePropertyOrientation.swift */; };
+		1C667E042AD6AEA6001CCD2D /* UIImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DF32AD6AEA6001CCD2D /* UIImage+RawBytes.swift */; };
+		1C667E052AD6AEA6001CCD2D /* MLMultiArray+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DF42AD6AEA6001CCD2D /* MLMultiArray+Helpers.swift */; };
+		1C667E062AD6AEA6001CCD2D /* MLModel+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DF52AD6AEA6001CCD2D /* MLModel+Images.swift */; };
+		1C667E072AD6AEA6001CCD2D /* CoreML+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DF62AD6AEA6001CCD2D /* CoreML+Combine.swift */; };
+		1C667E082AD6AEA6001CCD2D /* CVPixelBuffer+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DF72AD6AEA6001CCD2D /* CVPixelBuffer+Create.swift */; };
+		1C667E092AD6AEA6001CCD2D /* CGImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DF82AD6AEA6001CCD2D /* CGImage+CVPixelBuffer.swift */; };
+		1C667E0A2AD6AEA6001CCD2D /* NonMaxSuppression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DF92AD6AEA6001CCD2D /* NonMaxSuppression.swift */; };
+		1C667E0B2AD6AEA6001CCD2D /* CGImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DFA2AD6AEA6001CCD2D /* CGImage+RawBytes.swift */; };
+		1C667E0C2AD6AEA6001CCD2D /* MLMultiArray+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DFB2AD6AEA6001CCD2D /* MLMultiArray+Image.swift */; };
+		1C667E0D2AD6AEA6001CCD2D /* CVPixelBuffer+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DFC2AD6AEA6001CCD2D /* CVPixelBuffer+Resize.swift */; };
+		1C667E0E2AD6AEA6001CCD2D /* CVPixelBuffer+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C667DFD2AD6AEA6001CCD2D /* CVPixelBuffer+Rotate.swift */; };
+		1C667E2C2AD6AF6B001CCD2D /* AnimeGANv3_adv_Kpop.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E102AD6AF6B001CCD2D /* AnimeGANv3_adv_Kpop.mlmodel */; };
+		1C667E2D2AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.5.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E112AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.5.mlmodel */; };
+		1C667E2E2AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.6.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E122AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.6.mlmodel */; };
+		1C667E2F2AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.7.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E132AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.7.mlmodel */; };
+		1C667E302AD6AF6B001CCD2D /* AnimeGANv3_light_USA.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E142AD6AF6B001CCD2D /* AnimeGANv3_light_USA.mlmodel */; };
+		1C667E312AD6AF6B001CCD2D /* AnimeGANv3_Arcane_46.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E152AD6AF6B001CCD2D /* AnimeGANv3_Arcane_46.mlmodel */; };
+		1C667E322AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.5.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E162AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.5.mlmodel */; };
+		1C667E332AD6AF6B001CCD2D /* AnimeGANv3_light_Comic.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E172AD6AF6B001CCD2D /* AnimeGANv3_light_Comic.mlmodel */; };
+		1C667E342AD6AF6B001CCD2D /* AnimeGANv3_light_Trump_v1.9.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E182AD6AF6B001CCD2D /* AnimeGANv3_light_Trump_v1.9.mlmodel */; };
+		1C667E352AD6AF6B001CCD2D /* AnimeGANv3_tiny_Comic.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E192AD6AF6B001CCD2D /* AnimeGANv3_tiny_Comic.mlmodel */; };
+		1C667E362AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.7.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E1A2AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.7.mlmodel */; };
+		1C667E372AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E1B2AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA2.mlmodel */; };
+		1C667E382AD6AF6B001CCD2D /* AnimeGANv3_Hayao_36.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E1C2AD6AF6B001CCD2D /* AnimeGANv3_Hayao_36.mlmodel */; };
+		1C667E392AD6AF6B001CCD2D /* pb_to_coreml2.py in Resources */ = {isa = PBXBuildFile; fileRef = 1C667E1D2AD6AF6B001CCD2D /* pb_to_coreml2.py */; };
+		1C667E3A2AD6AF6B001CCD2D /* AnimeGANv3_light_comic_99.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E1E2AD6AF6B001CCD2D /* AnimeGANv3_light_comic_99.mlmodel */; };
+		1C667E3B2AD6AF6B001CCD2D /* AnimeGANv3_light_Arcane.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E1F2AD6AF6B001CCD2D /* AnimeGANv3_light_Arcane.mlmodel */; };
+		1C667E3C2AD6AF6B001CCD2D /* AnimeGANv3_light_USA2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E202AD6AF6B001CCD2D /* AnimeGANv3_light_USA2.mlmodel */; };
+		1C667E3D2AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.8.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E212AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.8.mlmodel */; };
+		1C667E3E2AD6AF6B001CCD2D /* AnimeGANv3_tiny_Nordic_myth1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E222AD6AF6B001CCD2D /* AnimeGANv3_tiny_Nordic_myth1.mlmodel */; };
+		1C667E3F2AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E232AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth1.mlmodel */; };
+		1C667E402AD6AF6B001CCD2D /* AnimeGANv3_Shinkai.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E242AD6AF6B001CCD2D /* AnimeGANv3_Shinkai.mlmodel */; };
+		1C667E412AD6AF6B001CCD2D /* AnimeGANv3_tiny_Nordic_myth2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E252AD6AF6B001CCD2D /* AnimeGANv3_tiny_Nordic_myth2.mlmodel */; };
+		1C667E422AD6AF6B001CCD2D /* AnimeGANv3_large_Kpop.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E262AD6AF6B001CCD2D /* AnimeGANv3_large_Kpop.mlmodel */; };
+		1C667E432AD6AF6B001CCD2D /* AnimeGANv3_tiny_Arcane.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E272AD6AF6B001CCD2D /* AnimeGANv3_tiny_Arcane.mlmodel */; };
+		1C667E442AD6AF6B001CCD2D /* AnimeGANv3_Kpop.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E282AD6AF6B001CCD2D /* AnimeGANv3_Kpop.mlmodel */; };
+		1C667E452AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E292AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA.mlmodel */; };
+		1C667E462AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.9.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E2A2AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.9.mlmodel */; };
+		1C667E472AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E2B2AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth2.mlmodel */; };
 		1C829C592AC961A200DAB418 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C829C582AC961A200DAB418 /* ImageData.swift */; };
-		1C8385CB2AD51DAD00F9F8A4 /* DownloadImageDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8385CA2AD51DAD00F9F8A4 /* DownloadImageDemo.swift */; };
+		1C8385CB2AD51DAD00F9F8A4 /* DownloadAndSaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8385CA2AD51DAD00F9F8A4 /* DownloadAndSaveView.swift */; };
 		1C8CAF7A2ACC485300587BB8 /* PhotoPickerModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CAF792ACC485300587BB8 /* PhotoPickerModalView.swift */; };
 		1CA3DEFB2ACAF41B00F9CA48 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3DEFA2ACAF41B00F9CA48 /* TestView.swift */; };
 		1CB9CBFC2ABAC42C00B222F5 /* AI_ARTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB9CBFB2ABAC42C00B222F5 /* AI_ARTApp.swift */; };
@@ -30,8 +76,54 @@
 /* Begin PBXFileReference section */
 		1C0F97042AC2D9B500FEFF15 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		1C5827C22AC19628009BEE2F /* ImageSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
+		1C667DEA2AD69445001CCD2D /* ModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHandler.swift; sourceTree = "<group>"; };
+		1C667DED2AD6AEA6001CCD2D /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		1C667DEE2AD6AEA6001CCD2D /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		1C667DEF2AD6AEA6001CCD2D /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		1C667DF02AD6AEA6001CCD2D /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
+		1C667DF12AD6AEA6001CCD2D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		1C667DF22AD6AEA6001CCD2D /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		1C667DF32AD6AEA6001CCD2D /* UIImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+RawBytes.swift"; sourceTree = "<group>"; };
+		1C667DF42AD6AEA6001CCD2D /* MLMultiArray+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Helpers.swift"; sourceTree = "<group>"; };
+		1C667DF52AD6AEA6001CCD2D /* MLModel+Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLModel+Images.swift"; sourceTree = "<group>"; };
+		1C667DF62AD6AEA6001CCD2D /* CoreML+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreML+Combine.swift"; sourceTree = "<group>"; };
+		1C667DF72AD6AEA6001CCD2D /* CVPixelBuffer+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Create.swift"; sourceTree = "<group>"; };
+		1C667DF82AD6AEA6001CCD2D /* CGImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		1C667DF92AD6AEA6001CCD2D /* NonMaxSuppression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonMaxSuppression.swift; sourceTree = "<group>"; };
+		1C667DFA2AD6AEA6001CCD2D /* CGImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+RawBytes.swift"; sourceTree = "<group>"; };
+		1C667DFB2AD6AEA6001CCD2D /* MLMultiArray+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Image.swift"; sourceTree = "<group>"; };
+		1C667DFC2AD6AEA6001CCD2D /* CVPixelBuffer+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Resize.swift"; sourceTree = "<group>"; };
+		1C667DFD2AD6AEA6001CCD2D /* CVPixelBuffer+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Rotate.swift"; sourceTree = "<group>"; };
+		1C667E102AD6AF6B001CCD2D /* AnimeGANv3_adv_Kpop.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_adv_Kpop.mlmodel; sourceTree = "<group>"; };
+		1C667E112AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.5.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_Disney_v1.5.mlmodel; sourceTree = "<group>"; };
+		1C667E122AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.6.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_Trump_v1.6.mlmodel; sourceTree = "<group>"; };
+		1C667E132AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.7.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_Trump_v1.7.mlmodel; sourceTree = "<group>"; };
+		1C667E142AD6AF6B001CCD2D /* AnimeGANv3_light_USA.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_light_USA.mlmodel; sourceTree = "<group>"; };
+		1C667E152AD6AF6B001CCD2D /* AnimeGANv3_Arcane_46.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_Arcane_46.mlmodel; sourceTree = "<group>"; };
+		1C667E162AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.5.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_Trump_v1.5.mlmodel; sourceTree = "<group>"; };
+		1C667E172AD6AF6B001CCD2D /* AnimeGANv3_light_Comic.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_light_Comic.mlmodel; sourceTree = "<group>"; };
+		1C667E182AD6AF6B001CCD2D /* AnimeGANv3_light_Trump_v1.9.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_light_Trump_v1.9.mlmodel; sourceTree = "<group>"; };
+		1C667E192AD6AF6B001CCD2D /* AnimeGANv3_tiny_Comic.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_tiny_Comic.mlmodel; sourceTree = "<group>"; };
+		1C667E1A2AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.7.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_Disney_v1.7.mlmodel; sourceTree = "<group>"; };
+		1C667E1B2AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_tiny_USA2.mlmodel; sourceTree = "<group>"; };
+		1C667E1C2AD6AF6B001CCD2D /* AnimeGANv3_Hayao_36.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_Hayao_36.mlmodel; sourceTree = "<group>"; };
+		1C667E1D2AD6AF6B001CCD2D /* pb_to_coreml2.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = pb_to_coreml2.py; sourceTree = "<group>"; };
+		1C667E1E2AD6AF6B001CCD2D /* AnimeGANv3_light_comic_99.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_light_comic_99.mlmodel; sourceTree = "<group>"; };
+		1C667E1F2AD6AF6B001CCD2D /* AnimeGANv3_light_Arcane.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_light_Arcane.mlmodel; sourceTree = "<group>"; };
+		1C667E202AD6AF6B001CCD2D /* AnimeGANv3_light_USA2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_light_USA2.mlmodel; sourceTree = "<group>"; };
+		1C667E212AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.8.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_Trump_v1.8.mlmodel; sourceTree = "<group>"; };
+		1C667E222AD6AF6B001CCD2D /* AnimeGANv3_tiny_Nordic_myth1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_tiny_Nordic_myth1.mlmodel; sourceTree = "<group>"; };
+		1C667E232AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_light_Nordic_myth1.mlmodel; sourceTree = "<group>"; };
+		1C667E242AD6AF6B001CCD2D /* AnimeGANv3_Shinkai.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_Shinkai.mlmodel; sourceTree = "<group>"; };
+		1C667E252AD6AF6B001CCD2D /* AnimeGANv3_tiny_Nordic_myth2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_tiny_Nordic_myth2.mlmodel; sourceTree = "<group>"; };
+		1C667E262AD6AF6B001CCD2D /* AnimeGANv3_large_Kpop.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_large_Kpop.mlmodel; sourceTree = "<group>"; };
+		1C667E272AD6AF6B001CCD2D /* AnimeGANv3_tiny_Arcane.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_tiny_Arcane.mlmodel; sourceTree = "<group>"; };
+		1C667E282AD6AF6B001CCD2D /* AnimeGANv3_Kpop.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_Kpop.mlmodel; sourceTree = "<group>"; };
+		1C667E292AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_tiny_USA.mlmodel; sourceTree = "<group>"; };
+		1C667E2A2AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.9.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_Disney_v1.9.mlmodel; sourceTree = "<group>"; };
+		1C667E2B2AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_light_Nordic_myth2.mlmodel; sourceTree = "<group>"; };
 		1C829C582AC961A200DAB418 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
-		1C8385CA2AD51DAD00F9F8A4 /* DownloadImageDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageDemo.swift; sourceTree = "<group>"; };
+		1C8385CA2AD51DAD00F9F8A4 /* DownloadAndSaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAndSaveView.swift; sourceTree = "<group>"; };
 		1C8CAF792ACC485300587BB8 /* PhotoPickerModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerModalView.swift; sourceTree = "<group>"; };
 		1CA3DEFA2ACAF41B00F9CA48 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		1CB9CBF82ABAC42C00B222F5 /* AI ART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI ART.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +152,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C667DEC2AD6AEA6001CCD2D /* CoreMLHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				1C667DED2AD6AEA6001CCD2D /* Array+Extensions.swift */,
+				1C667DEE2AD6AEA6001CCD2D /* Math.swift */,
+				1C667DEF2AD6AEA6001CCD2D /* UIImage+CVPixelBuffer.swift */,
+				1C667DF02AD6AEA6001CCD2D /* Predictions.swift */,
+				1C667DF12AD6AEA6001CCD2D /* UIImage+Extensions.swift */,
+				1C667DF22AD6AEA6001CCD2D /* CGImagePropertyOrientation.swift */,
+				1C667DF32AD6AEA6001CCD2D /* UIImage+RawBytes.swift */,
+				1C667DF42AD6AEA6001CCD2D /* MLMultiArray+Helpers.swift */,
+				1C667DF52AD6AEA6001CCD2D /* MLModel+Images.swift */,
+				1C667DF62AD6AEA6001CCD2D /* CoreML+Combine.swift */,
+				1C667DF72AD6AEA6001CCD2D /* CVPixelBuffer+Create.swift */,
+				1C667DF82AD6AEA6001CCD2D /* CGImage+CVPixelBuffer.swift */,
+				1C667DF92AD6AEA6001CCD2D /* NonMaxSuppression.swift */,
+				1C667DFA2AD6AEA6001CCD2D /* CGImage+RawBytes.swift */,
+				1C667DFB2AD6AEA6001CCD2D /* MLMultiArray+Image.swift */,
+				1C667DFC2AD6AEA6001CCD2D /* CVPixelBuffer+Resize.swift */,
+				1C667DFD2AD6AEA6001CCD2D /* CVPixelBuffer+Rotate.swift */,
+			);
+			path = CoreMLHelpers;
+			sourceTree = "<group>";
+		};
+		1C667E0F2AD6AF6B001CCD2D /* coreml */ = {
+			isa = PBXGroup;
+			children = (
+				1C667E102AD6AF6B001CCD2D /* AnimeGANv3_adv_Kpop.mlmodel */,
+				1C667E112AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.5.mlmodel */,
+				1C667E122AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.6.mlmodel */,
+				1C667E132AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.7.mlmodel */,
+				1C667E142AD6AF6B001CCD2D /* AnimeGANv3_light_USA.mlmodel */,
+				1C667E152AD6AF6B001CCD2D /* AnimeGANv3_Arcane_46.mlmodel */,
+				1C667E162AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.5.mlmodel */,
+				1C667E172AD6AF6B001CCD2D /* AnimeGANv3_light_Comic.mlmodel */,
+				1C667E182AD6AF6B001CCD2D /* AnimeGANv3_light_Trump_v1.9.mlmodel */,
+				1C667E192AD6AF6B001CCD2D /* AnimeGANv3_tiny_Comic.mlmodel */,
+				1C667E1A2AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.7.mlmodel */,
+				1C667E1B2AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA2.mlmodel */,
+				1C667E1C2AD6AF6B001CCD2D /* AnimeGANv3_Hayao_36.mlmodel */,
+				1C667E1D2AD6AF6B001CCD2D /* pb_to_coreml2.py */,
+				1C667E1E2AD6AF6B001CCD2D /* AnimeGANv3_light_comic_99.mlmodel */,
+				1C667E1F2AD6AF6B001CCD2D /* AnimeGANv3_light_Arcane.mlmodel */,
+				1C667E202AD6AF6B001CCD2D /* AnimeGANv3_light_USA2.mlmodel */,
+				1C667E212AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.8.mlmodel */,
+				1C667E222AD6AF6B001CCD2D /* AnimeGANv3_tiny_Nordic_myth1.mlmodel */,
+				1C667E232AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth1.mlmodel */,
+				1C667E242AD6AF6B001CCD2D /* AnimeGANv3_Shinkai.mlmodel */,
+				1C667E252AD6AF6B001CCD2D /* AnimeGANv3_tiny_Nordic_myth2.mlmodel */,
+				1C667E262AD6AF6B001CCD2D /* AnimeGANv3_large_Kpop.mlmodel */,
+				1C667E272AD6AF6B001CCD2D /* AnimeGANv3_tiny_Arcane.mlmodel */,
+				1C667E282AD6AF6B001CCD2D /* AnimeGANv3_Kpop.mlmodel */,
+				1C667E292AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA.mlmodel */,
+				1C667E2A2AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.9.mlmodel */,
+				1C667E2B2AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth2.mlmodel */,
+			);
+			path = coreml;
+			sourceTree = "<group>";
+		};
 		1CB9CBEF2ABAC42C00B222F5 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +230,7 @@
 		1CB9CBFA2ABAC42C00B222F5 /* AI ART */ = {
 			isa = PBXGroup;
 			children = (
+				1C667DEA2AD69445001CCD2D /* ModelHandler.swift */,
 				1CB9CC092ABAEDB000B222F5 /* AvatarsView.swift */,
 				1CB9CBFB2ABAC42C00B222F5 /* AI_ARTApp.swift */,
 				1CB9CC112ABAFB4800B222F5 /* MainView.swift */,
@@ -91,7 +243,9 @@
 				1C0F97042AC2D9B500FEFF15 /* DataModel.swift */,
 				1C8CAF792ACC485300587BB8 /* PhotoPickerModalView.swift */,
 				1CDC17A42ACD71CD00ADCEBF /* ImageCropView.swift */,
-				1C8385CA2AD51DAD00F9F8A4 /* DownloadImageDemo.swift */,
+				1C8385CA2AD51DAD00F9F8A4 /* DownloadAndSaveView.swift */,
+				1C667E0F2AD6AF6B001CCD2D /* coreml */,
+				1C667DEC2AD6AEA6001CCD2D /* CoreMLHelpers */,
 				1CB9CBFF2ABAC42D00B222F5 /* Assets.xcassets */,
 				1CB9CC012ABAC42D00B222F5 /* Preview Content */,
 				1CEE055B2AD29B63009361D1 /* DemoCropView.swift */,
@@ -168,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CB9CC032ABAC42D00B222F5 /* Preview Assets.xcassets in Resources */,
+				1C667E392AD6AF6B001CCD2D /* pb_to_coreml2.py in Resources */,
 				1CB9CC002ABAC42D00B222F5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,21 +334,66 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C667E2C2AD6AF6B001CCD2D /* AnimeGANv3_adv_Kpop.mlmodel in Sources */,
+				1C667E442AD6AF6B001CCD2D /* AnimeGANv3_Kpop.mlmodel in Sources */,
+				1C667DEB2AD69445001CCD2D /* ModelHandler.swift in Sources */,
+				1C667DFE2AD6AEA6001CCD2D /* Array+Extensions.swift in Sources */,
 				1CCA84142ABC0EF500E151FD /* ImageRowDetailsView.swift in Sources */,
 				1CEE055C2AD29B63009361D1 /* DemoCropView.swift in Sources */,
+				1C667E432AD6AF6B001CCD2D /* AnimeGANv3_tiny_Arcane.mlmodel in Sources */,
+				1C667E0C2AD6AEA6001CCD2D /* MLMultiArray+Image.swift in Sources */,
 				1CB9CC142ABAFEE400B222F5 /* ImageView.swift in Sources */,
-				1C8385CB2AD51DAD00F9F8A4 /* DownloadImageDemo.swift in Sources */,
+				1C667E312AD6AF6B001CCD2D /* AnimeGANv3_Arcane_46.mlmodel in Sources */,
+				1C667E332AD6AF6B001CCD2D /* AnimeGANv3_light_Comic.mlmodel in Sources */,
+				1C8385CB2AD51DAD00F9F8A4 /* DownloadAndSaveView.swift in Sources */,
+				1C667E042AD6AEA6001CCD2D /* UIImage+RawBytes.swift in Sources */,
 				1CB9CC0A2ABAEDB000B222F5 /* AvatarsView.swift in Sources */,
+				1C667E452AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA.mlmodel in Sources */,
+				1C667E002AD6AEA6001CCD2D /* UIImage+CVPixelBuffer.swift in Sources */,
+				1C667E032AD6AEA6001CCD2D /* CGImagePropertyOrientation.swift in Sources */,
+				1C667E072AD6AEA6001CCD2D /* CoreML+Combine.swift in Sources */,
+				1C667E062AD6AEA6001CCD2D /* MLModel+Images.swift in Sources */,
+				1C667E472AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth2.mlmodel in Sources */,
+				1C667E052AD6AEA6001CCD2D /* MLMultiArray+Helpers.swift in Sources */,
+				1C667E082AD6AEA6001CCD2D /* CVPixelBuffer+Create.swift in Sources */,
 				1CB9CC122ABAFB4800B222F5 /* MainView.swift in Sources */,
+				1C667E382AD6AF6B001CCD2D /* AnimeGANv3_Hayao_36.mlmodel in Sources */,
+				1C667E092AD6AEA6001CCD2D /* CGImage+CVPixelBuffer.swift in Sources */,
+				1C667E372AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA2.mlmodel in Sources */,
 				1CB9CC182ABB0DDD00B222F5 /* ImageRowView.swift in Sources */,
 				1C0F97052AC2D9B500FEFF15 /* DataModel.swift in Sources */,
+				1C667E0B2AD6AEA6001CCD2D /* CGImage+RawBytes.swift in Sources */,
 				1CB9CC0E2ABAFAA300B222F5 /* SelfieView.swift in Sources */,
+				1C667E3F2AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth1.mlmodel in Sources */,
 				1CB9CC162ABB030000B222F5 /* SubtitleView.swift in Sources */,
+				1C667E342AD6AF6B001CCD2D /* AnimeGANv3_light_Trump_v1.9.mlmodel in Sources */,
+				1C667E362AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.7.mlmodel in Sources */,
+				1C667E302AD6AF6B001CCD2D /* AnimeGANv3_light_USA.mlmodel in Sources */,
+				1C667E0E2AD6AEA6001CCD2D /* CVPixelBuffer+Rotate.swift in Sources */,
+				1C667E3C2AD6AF6B001CCD2D /* AnimeGANv3_light_USA2.mlmodel in Sources */,
+				1C667E2E2AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.6.mlmodel in Sources */,
 				1C8CAF7A2ACC485300587BB8 /* PhotoPickerModalView.swift in Sources */,
+				1C667E0D2AD6AEA6001CCD2D /* CVPixelBuffer+Resize.swift in Sources */,
+				1C667E3D2AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.8.mlmodel in Sources */,
+				1C667E352AD6AF6B001CCD2D /* AnimeGANv3_tiny_Comic.mlmodel in Sources */,
 				1CB9CBFC2ABAC42C00B222F5 /* AI_ARTApp.swift in Sources */,
+				1C667E022AD6AEA6001CCD2D /* UIImage+Extensions.swift in Sources */,
+				1C667E462AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.9.mlmodel in Sources */,
+				1C667DFF2AD6AEA6001CCD2D /* Math.swift in Sources */,
+				1C667E2F2AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.7.mlmodel in Sources */,
+				1C667E012AD6AEA6001CCD2D /* Predictions.swift in Sources */,
+				1C667E402AD6AF6B001CCD2D /* AnimeGANv3_Shinkai.mlmodel in Sources */,
+				1C667E322AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.5.mlmodel in Sources */,
 				1C5827C32AC19628009BEE2F /* ImageSliderView.swift in Sources */,
+				1C667E412AD6AF6B001CCD2D /* AnimeGANv3_tiny_Nordic_myth2.mlmodel in Sources */,
+				1C667E3E2AD6AF6B001CCD2D /* AnimeGANv3_tiny_Nordic_myth1.mlmodel in Sources */,
+				1C667E3B2AD6AF6B001CCD2D /* AnimeGANv3_light_Arcane.mlmodel in Sources */,
+				1C667E422AD6AF6B001CCD2D /* AnimeGANv3_large_Kpop.mlmodel in Sources */,
+				1C667E2D2AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.5.mlmodel in Sources */,
 				1CA3DEFB2ACAF41B00F9CA48 /* TestView.swift in Sources */,
+				1C667E3A2AD6AF6B001CCD2D /* AnimeGANv3_light_comic_99.mlmodel in Sources */,
 				1CDC17A52ACD71CD00ADCEBF /* ImageCropView.swift in Sources */,
+				1C667E0A2AD6AEA6001CCD2D /* NonMaxSuppression.swift in Sources */,
 				1C829C592AC961A200DAB418 /* ImageData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,7 @@ struct ImageCropView: View {
     var jsonData: JsonData
     var urlString:String
     @State private var isActive:Bool = false
+    @State private var isShowing:Bool = false
     @State var outputImageUrl:String?
     var body: some View {
         
@@ -34,13 +35,20 @@ struct ImageCropView: View {
                 Button{
                     if let selectedImageData ,let uiImage = UIImage(data: selectedImageData){
                         print(urlString)
-                        isActive = true
-                        sendAPIPostRequest(json: jsonData, image: uiImage, urlString: urlString){ url in
-                            outputImageUrl = url
+                            //                        isActive = true
+                        if jsonData.folder == "AnimeGANv3"{
+                            isShowing = true
+                            
+                        }else{
+                            isActive = true
+                            sendAPIPostRequest(json: jsonData, image: uiImage, urlString: urlString){ url in
+                                outputImageUrl = url
+                            }
                         }
                         
+                        
                     }
-                   
+                    
                     
                 }label: {
                     Text("Generate")
@@ -50,15 +58,19 @@ struct ImageCropView: View {
                         .frame(width: 250,height: 50)
                         .background(Color.blue.opacity(1.5))
                         .cornerRadius(12)
-                   
+                    
                 }
                 Spacer(minLength: 5)
                 
-             
+                
                 
             }
             .navigationDestination(isPresented: $isActive){
                 DownloadView(url: $outputImageUrl)
+            }
+            .navigationDestination(isPresented: $isShowing){
+            let modelName = "\(jsonData.folder)_\(jsonData.style)"
+                DownloadAndSaveView(modelName: modelName, selectedImageData: $selectedImageData)
             }
             
             .toolbar{
@@ -87,7 +99,7 @@ struct ImageCropView: View {
 
 
 func sendAPIPostRequest(json: JsonData, image: UIImage ,urlString: String, completion: @escaping (String?) -> Void)  {
-
+    
     
     print("Your image is on processing....Please wait a moment...!")
     guard let url = URL(string: urlString) else {
@@ -101,7 +113,7 @@ func sendAPIPostRequest(json: JsonData, image: UIImage ,urlString: String, compl
     
     var data = Data()
     
-//    Create jsonData
+        //    Create jsonData
     do{
         let jsonData: [String: Any] = [
             "model_folder": json.folder,
@@ -121,16 +133,16 @@ func sendAPIPostRequest(json: JsonData, image: UIImage ,urlString: String, compl
         print("Error creating JSON data: \(error)")
     }
     
-//        //    Add JSONData
-//    let jsonData = try! JSONEncoder().encode(json)
-//    let jsonString = String(data: jsonData, encoding: .utf8)
-//    print(jsonString)
+        //        //    Add JSONData
+        //    let jsonData = try! JSONEncoder().encode(json)
+        //    let jsonString = String(data: jsonData, encoding: .utf8)
+        //    print(jsonString)
     
-//    data.append("--\(boundary)\r\n".data(using: .utf8)!)
-//    data.append("Content-Disposition: form-data; name=\"json_data\"; filename=\"data.json\"\r\n".data(using: .utf8)!)
-//    data.append("Content-Type: application/json\r\n\r\n".data(using: .utf8)!)
-//    data.append(jsonData)
-//    data.append("\r\n".data(using: .utf8)!)
+        //    data.append("--\(boundary)\r\n".data(using: .utf8)!)
+        //    data.append("Content-Disposition: form-data; name=\"json_data\"; filename=\"data.json\"\r\n".data(using: .utf8)!)
+        //    data.append("Content-Type: application/json\r\n\r\n".data(using: .utf8)!)
+        //    data.append(jsonData)
+        //    data.append("\r\n".data(using: .utf8)!)
         //    Add Image Data
     
     if let imageData = image.jpegData(compressionQuality: 0.8) {
@@ -152,17 +164,17 @@ func sendAPIPostRequest(json: JsonData, image: UIImage ,urlString: String, compl
             return
         }
         if let response = response as? HTTPURLResponse {
-
+            
             print("Response status code: \(response.statusCode)")
-            if response.statusCode == 400{
+            if response.statusCode != 200{
                 completion("https://as2.ftcdn.net/v2/jpg/00/89/55/15/1000_F_89551596_LdHAZRwz3i4EM4J0NHNHy2hEUYDfXc0j.jpg")
             }
         }
         
-//        if let data = data, let dataString = String(data: data, encoding: .utf8) {
-//            print("Response data string:\n \(dataString)")
-//
-//        }
+            //        if let data = data, let dataString = String(data: data, encoding: .utf8) {
+            //            print("Response data string:\n \(dataString)")
+            //
+            //        }
         if let data = data {
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
