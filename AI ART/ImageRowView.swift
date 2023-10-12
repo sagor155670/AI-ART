@@ -10,13 +10,14 @@ import SwiftUI
 struct ImageRowView: View {
 //    var imageSet: [ImageView]
     @ObservedObject var data: DataModel
+    @Binding var selectedImageData:Data?
 //    var imageSliderSet: [ImageSliderView]
     var folder: String
 //    var urlString: String
     var body: some View {
         VStack {
             
-            SubtitleView(data: data, folder: self.folder, title: self.folder)
+            SubtitleView(data: data, selectedImageData: $selectedImageData, folder: self.folder, title: self.folder)
                 
             ScrollView(.horizontal) {
                 
@@ -33,7 +34,7 @@ struct ImageRowView: View {
                     ForEach(data.mockData) { imageSlider in
                         if imageSlider.folder == folder {
 //                            ImageSliderView( beforeImageName: imageSlider.beforeImage, afterImageName: imageSlider.afterImage, title: imageSlider.style,width:140,height: 150, data: data, folder: self.folder,urlString: imageSlider.url)
-                            ImageSliderView(beforeImageName: imageSlider.beforeImage , afterImageName: imageSlider.afterImage, title: imageSlider.style, width: 140, height: 150, folder: self.folder, urlString: imageSlider.url , data: data)
+                            ImageSliderView(beforeImageName: imageSlider.beforeImage , afterImageName: imageSlider.afterImage, title: imageSlider.style, width: 140, height: 150, folder: self.folder, urlString: imageSlider.url , data: data, selectedImageData: $selectedImageData)
 //                                .onTapGesture {
 //                                    print("hi")
 //                                }
@@ -64,6 +65,6 @@ struct ImageRowView: View {
 struct ImageRowView_Previews: PreviewProvider {
     static var previews: some View {
 //        ImageRowView(imageSet: MockImageViewData.ImageViews)
-        ImageRowView(data: DataModel(), folder: "StyleGANEX")
+        ImageRowView(data: DataModel(), selectedImageData: .constant(nil), folder: "StyleGANEX")
     }
 }

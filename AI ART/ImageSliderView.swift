@@ -25,13 +25,15 @@ struct ImageSliderView: View,Identifiable {
     var urlString: String
     @ObservedObject var data: DataModel
     @State var isShowingPhotoPicker:Bool = false
+    @Binding var selectedImageData:Data?
+    @State private var isPresentingCropView:Bool = false
         //    @State var slider: CGFloat = 1
         //    @State var isScaled :Bool = true
     
    
 
     var body: some View {
-        let jsondata = JsonData(folder: self.folder, style: self.title)
+         let jsondata = JsonData(folder: self.folder, style: self.title)
         VStack {
             ZStack {
                 Image(afterImageName)
@@ -72,6 +74,7 @@ struct ImageSliderView: View,Identifiable {
                 
                 
             }.cornerRadius(10)
+            
                 
             Text(title)
                 .foregroundColor(.gray)
@@ -80,16 +83,22 @@ struct ImageSliderView: View,Identifiable {
                 .scaledToFit()
                 .minimumScaleFactor(0.01)
         }
-        .sheet(isPresented: $isShowingPhotoPicker){
-            PhotoPickerModalView(isShowingPhotoPicker: $isShowingPhotoPicker, jsonData: jsondata, urlString: urlString)
-                .presentationDetents([.fraction(0.25)])
-                .presentationBackground(Color.clear)
-                .transaction{ transaction in
-                    transaction.animation = nil
-                }
+
+        .fullScreenCover(isPresented: $isPresentingCropView){
+            ImageCropView(selectedImageData: $selectedImageData, isPresenting: $isPresentingCropView, isShowingPhotoPicker: .constant(false), jsonData: jsondata, urlString: urlString)
+
         }
+//        .sheet(isPresented: $isShowingPhotoPicker){
+//            PhotoPickerModalView(isShowingPhotoPicker: $isShowingPhotoPicker, jsonData: jsondata, urlString: urlString)
+//                .presentationDetents([.fraction(0.25)])
+//                .presentationBackground(Color.clear)
+//                .transaction{ transaction in
+//                    transaction.animation = nil
+//                }
+//        }
         .onTapGesture {
-            isShowingPhotoPicker.toggle()
+//            isShowingPhotoPicker.toggle()
+            isPresentingCropView.toggle()
         }
 
 

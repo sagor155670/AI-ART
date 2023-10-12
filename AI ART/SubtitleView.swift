@@ -10,6 +10,7 @@ import SwiftUI
 struct SubtitleView: View {
     @State var isShowingRowDetails = false
     @ObservedObject var data: DataModel
+    @Binding var selectedImageData:Data?
     var folder: String
     var title: String
     var body: some View {
@@ -21,7 +22,7 @@ struct SubtitleView: View {
                 .frame(maxWidth: 230,alignment: .leading)
 //                .padding(10)
             
-            NavigationLink(destination: ImageRowDetailsView(isShowingRowDetails: $isShowingRowDetails, data: data, folder: folder)){
+            NavigationLink(destination: ImageRowDetailsView(isShowingRowDetails: $isShowingRowDetails, data: data, selectedImageData: $selectedImageData, folder: folder)){
                 HStack {
                     Text("See All")
                         .fontDesign(.serif)
@@ -58,6 +59,6 @@ struct SubtitleView: View {
 
 struct SubtitleView_Previews: PreviewProvider {
     static var previews: some View {
-        SubtitleView(data: DataModel(), folder: "StyleGANEX", title: "Cinematic")
+        SubtitleView(data: DataModel(), selectedImageData: .constant(nil), folder: "StyleGANEX", title: "Cinematic")
     }
 }

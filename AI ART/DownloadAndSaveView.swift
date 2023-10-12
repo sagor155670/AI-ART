@@ -97,44 +97,57 @@ struct DownloadView_Previews: PreviewProvider {
     }
 }
 
+
 struct DownloadAndSaveView: View{
     var modelName: String
     @Binding var selectedImageData:Data?
+    @State private var outputImage: UIImage? = nil
+
     var body: some View{
-        VStack{
-            if let selectedImageData ,let uiImage = UIImage(data: selectedImageData){
-                if let outputImage:UIImage? = Cartoonizer(modelName: modelName).inference(image: uiImage){
-                    
+        VStack {
+            if let selectedImageData = selectedImageData, let uiImage = UIImage(data: selectedImageData){
+                if outputImage != nil {
                     Image(uiImage: outputImage!)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                    if outputImage != nil{
-                        Button{
-                            SaveImage(image: outputImage!)
-                        }label: {
-                            Text("Save Image")
-                                .font(.headline)
-                                .fontDesign(.serif)
-                                .fontWeight(.heavy)
-                                .padding(.horizontal,30)
-                                .padding(.vertical,10)
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                                
-                                
-                        }
+                    Button{
+                        SaveImage(image: outputImage!)
+                    }label: {
+                        Text("Save Image")
+                            .font(.headline)
+                            .fontDesign(.serif)
+                            .fontWeight(.heavy)
+                            .padding(.horizontal,30)
+                            .padding(.vertical,10)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                     }
-                }else{
+                } else {
                     ProgressView()
+                        .controlSize(.large)
+                    
                 }
-              
-                
             }
-
+        }
+        .task {
+            await loadData(selectedImageData: selectedImageData)
         }
     }
+
     func SaveImage(image:UIImage){
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
+
+    func loadData(selectedImageData: Data?) async {
+        if let data = selectedImageData, let uiImage = UIImage(data: data) {
+            await Task.detached(priority: .high) {
+                let cartoonizer = Cartoonizer(modelName: modelName)
+                let result = cartoonizer.inference(image: uiImage)
+                DispatchQueue.main.async {
+                    self.outputImage = result
+                }
+            }
+        }
     }
 }

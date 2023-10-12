@@ -12,12 +12,13 @@ struct TestView: View {
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     @State private var isIncreasing = true
     @State var isShowing:Bool = false
+    @Binding var selectedImageData:Data?
     var body: some View {
         
        VStack{
            
-           ImageRowView(data: data, folder: "StyleGANEX")
-           ImageRowView(data: data, folder: "animegan2-pytorch")
+           ImageRowView(data: data, selectedImageData: $selectedImageData, folder: "StyleGANEX")
+           ImageRowView(data: data, selectedImageData: $selectedImageData, folder: "animegan2-pytorch")
            Button{
                isShowing.toggle()
            }label: {
@@ -40,7 +41,8 @@ struct TestView: View {
             }
         }
         .sheet(isPresented: $isShowing){
-            PhotoPickerModalView( isShowingPhotoPicker: $isShowing, jsonData: JsonData(folder: "", style: ""), urlString: "")
+//            PhotoPickerModalView( isShowingPhotoPicker: $isShowing, jsonData: JsonData(folder: "", style: ""), urlString: "")
+            PhotoPickerModalView(selectedImageData: .constant(nil), isShowingPhotoPicker: $isShowing)
                 .presentationDetents([.fraction(0.25)])
                 .presentationBackground(Color.clear)
         }
@@ -51,7 +53,7 @@ struct TestView: View {
 
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
-        TestView(data: DataModel())
+        TestView(data: DataModel(), selectedImageData: .constant(nil))
     }
 }
 

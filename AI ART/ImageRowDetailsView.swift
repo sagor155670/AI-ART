@@ -10,6 +10,7 @@ import SwiftUI
 struct ImageRowDetailsView: View {
     @Binding var isShowingRowDetails:Bool
     @ObservedObject var data: DataModel
+    @Binding var selectedImageData:Data?
     var folder:String
         //    var allImage: [ImageView]
     let columns:[GridItem] = [
@@ -44,7 +45,7 @@ struct ImageRowDetailsView: View {
                     ForEach(data.mockData) { imageSlider in
                         if imageSlider.folder == folder{
                                 //                            ImageSliderView(beforeImageName: imageSlider.beforeImage, afterImageName: imageSlider.afterImage, title: imageSlider.style,width:175,height: 180, data: data)
-                            ImageSliderView(beforeImageName: imageSlider.beforeImage , afterImageName: imageSlider.afterImage, title: imageSlider.style, width: 140, height: 150, folder: self.folder, urlString: imageSlider.url , data: data)
+                            ImageSliderView(beforeImageName: imageSlider.beforeImage , afterImageName: imageSlider.afterImage, title: imageSlider.style, width: 140, height: 150, folder: self.folder, urlString: imageSlider.url , data: data, selectedImageData: $selectedImageData)
                             
                         }
                         
@@ -103,6 +104,6 @@ struct ImageRowDetailsView: View {
 
 struct ImageRowDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageRowDetailsView(isShowingRowDetails: .constant(true), data: DataModel(), folder: "StyleGANEX")
+        ImageRowDetailsView(isShowingRowDetails: .constant(true), data: DataModel(), selectedImageData: .constant(nil), folder: "StyleGANEX")
     }
 }

@@ -28,6 +28,15 @@ struct ImageCropView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 350,height: 300)
                     
+                }else{
+                    VStack{
+                        Text("Select a Image First!")
+                            .fontWeight(.heavy)
+                            .fontDesign(.serif)
+                            .foregroundColor(.red)
+                            .fontWidth(.condensed)
+
+                    }
                 }
                 
                 Spacer()

@@ -18,7 +18,7 @@ class Cartoonizer {
     
     init(modelName: String) {
         self.config = MLModelConfiguration()
-        self.config.computeUnits = .cpuOnly
+        self.config.computeUnits = .cpuAndNeuralEngine
         self.modelName = modelName
     }
     

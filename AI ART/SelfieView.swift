@@ -10,8 +10,9 @@ import SwiftUI
 struct SelfieView: View {
     @ObservedObject var data: DataModel
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
-
+    @State var isShowingPhotoPicker:Bool = false
     @State var isIncreasing = true
+    @State var selectedImageData:Data? = nil
 //    var folders: [String] = ["StyleGANEX","VToonify_T","CartoonGan-tensorflow","DCT-Net","iNNfer"]
 
     var body: some View {
@@ -28,7 +29,7 @@ struct SelfieView: View {
                         //                        ImageRowView(imageSet: MockImageViewData.ImageViews)
                     
                     ForEach(data.folders, id: \.self){ folder in
-                        ImageRowView(data: data, folder: folder)
+                        ImageRowView(data: data, selectedImageData: $selectedImageData, folder: folder)
                     }
                     
 //                    ImageRowView(data: data)
@@ -37,7 +38,16 @@ struct SelfieView: View {
 //                    ImageRowView(data: data)
 //                    ImageRowView(data: data)
                     
-                } .onReceive(timer){_ in
+                }
+                .sheet(isPresented: $isShowingPhotoPicker){
+                    PhotoPickerModalView(selectedImageData: $selectedImageData, isShowingPhotoPicker: $isShowingPhotoPicker)
+                        .presentationDetents([.fraction(0.25)])
+                        .presentationBackground(Color.clear)
+                        .transaction{ transaction in
+                            transaction.animation = nil
+                        }
+                }
+                .onReceive(timer){_ in
                     
                     if isIncreasing{
                         if data.slider >= 1.0{
@@ -87,13 +97,13 @@ struct SelfieView: View {
                     
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
-                            
+                            isShowingPhotoPicker.toggle()
                         }label: {
-                            Text("PRO")
+                            Text("Select Image")
                                 .foregroundColor(.white)
                                 .fontDesign(.serif)
                                 .fontWeight(.medium)
-                                .frame(width: 60 , height: 30)
+                                .frame(width: 120 , height: 30)
                                 .background(.blue)
                                 .cornerRadius(5)
                         }

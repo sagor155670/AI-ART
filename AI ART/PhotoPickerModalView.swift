@@ -10,11 +10,12 @@ import PhotosUI
 
 struct PhotoPickerModalView: View {
     @State private var selectedImage:PhotosPickerItem? = nil
-    @State private var selectedImageData:Data? = nil
+//    @State private var selectedImageData:Data? = nil
+    @Binding var selectedImageData:Data?
     @State var isPresenting:Bool = false
     @Binding var isShowingPhotoPicker:Bool
-    var jsonData:JsonData
-    var urlString: String
+//    var jsonData:JsonData
+//    var urlString: String
     var body: some View {
         NavigationStack {
             
@@ -60,17 +61,18 @@ struct PhotoPickerModalView: View {
                     Task{
                         if let data = try? await newItem?.loadTransferable(type: Data.self){
                             selectedImageData = data
-                            isPresenting = true
+//                            isPresenting = true
+                            isShowingPhotoPicker = false
 
                         }
 
                     }
                 }
             }.cornerRadius(12)
-                .fullScreenCover(isPresented: $isPresenting){
-                    ImageCropView(selectedImageData: $selectedImageData, isPresenting: $isPresenting, isShowingPhotoPicker: $isShowingPhotoPicker, jsonData: jsonData, urlString: urlString)
-                    
-                }
+//                .fullScreenCover(isPresented: $isPresenting){
+//                    ImageCropView(selectedImageData: $selectedImageData, isPresenting: $isPresenting, isShowingPhotoPicker: $isShowingPhotoPicker, jsonData: jsonData, urlString: urlString)
+//
+//                }
             
             Button{
                 isShowingPhotoPicker = false
@@ -93,6 +95,7 @@ struct PhotoPickerModalView: View {
 struct ModalView_Previews: PreviewProvider {
    
     static var previews: some View {
-        PhotoPickerModalView( isShowingPhotoPicker: .constant(true), jsonData: JsonData(folder: "", style: ""), urlString: "")
+//        PhotoPickerModalView( isShowingPhotoPicker: .constant(true), jsonData: JsonData(folder: "", style: ""), urlString: "")
+        PhotoPickerModalView(selectedImageData: .constant(nil), isShowingPhotoPicker: .constant(true))
     }
 }
