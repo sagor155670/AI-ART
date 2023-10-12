@@ -53,7 +53,7 @@ class DataModel: ObservableObject {
         Item(beforeImage: "lady", afterImage: "AnimeGANv3_Shinkai", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Shinkai"),
         Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_Arcane", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "tiny_Arcane"),
         Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_Comic", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "tiny_Comic"),
-        Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_Nordic_myth1", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Nordic_myth1"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_Nordic_myth1", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "tiny_Nordic_myth1"),
         Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_Nordic_myth2", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "tiny_Nordic_myth2"),
         Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_USA", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "tiny_USA"),
         Item(beforeImage: "lady", afterImage: "AnimeGANv3_tiny_USA2", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "tiny_USA2"),
@@ -61,7 +61,7 @@ class DataModel: ObservableObject {
         Item(beforeImage: "lady", afterImage: "AnimeGANv3_Trump_v1.6", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Trump_v1.6"),
         Item(beforeImage: "lady", afterImage: "AnimeGANv3_Trump_v1.7", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Trump_v1.7"),
         Item(beforeImage: "lady", afterImage: "AnimeGANv3_Trump_v1.8", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Trump_v1.8"),
-        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Trump_v1.9", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "Trump_v1.9"),
+        Item(beforeImage: "lady", afterImage: "AnimeGANv3_Trump_v1.9", title: "HolyLand", width: 120, height: 140, folder: "AnimeGANv3", isTF: true, style: "light_Trump_v1.9"),
         
         
         
