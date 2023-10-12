@@ -35,7 +35,7 @@ class Cartoonizer {
         
         switch modelName {
         case "AnimeGANv3_adv_Kpop":
-            let model = try! AnimeGANv3_light_Nordic_myth2(configuration: config)
+            let model = try! AnimeGANv3_adv_Kpop(configuration: config)
             let pixelBuffer = try! model.prediction(AnimeGANv3_input: processedImage!).image
             return UIImage(pixelBuffer: pixelBuffer)!.resized(to: CGSize(width: 1024, height: 1024*ratio))
         case "AnimeGANv3_Disney_v1.5":
@@ -91,7 +91,7 @@ class Cartoonizer {
             let pixelBuffer = try! model.prediction(AnimeGANv3_input: processedImage!).image
             return UIImage(pixelBuffer: pixelBuffer)!.resized(to: CGSize(width: 1024, height: 1024*ratio))
         case "AnimeGANv3_light_Arcane":
-            let model = try! AnimeGANv3_light_Nordic_myth2(configuration: config)
+            let model = try! AnimeGANv3_light_Arcane(configuration: config)
             let pixelBuffer = try! model.prediction(AnimeGANv3_input: processedImage!).image
             return UIImage(pixelBuffer: pixelBuffer)!.resized(to: CGSize(width: 1024, height: 1024*ratio))
         case "AnimeGANv3_light_USA2":
