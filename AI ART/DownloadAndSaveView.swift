@@ -104,8 +104,8 @@ struct DownloadAndSaveView: View{
     @State private var outputImage: UIImage? = nil
 
     var body: some View{
-        VStack {
-            if let selectedImageData = selectedImageData, let uiImage = UIImage(data: selectedImageData){
+        LazyVStack {
+//            if let selectedImageData = selectedImageData, let uiImage = UIImage(data: selectedImageData){
                 if outputImage != nil {
                     Image(uiImage: outputImage!)
                         .resizable()
@@ -128,7 +128,7 @@ struct DownloadAndSaveView: View{
                         .controlSize(.large)
                     
                 }
-            }
+//            }
         }
         .task {
             await loadData(selectedImageData: selectedImageData)
@@ -141,13 +141,17 @@ struct DownloadAndSaveView: View{
 
     func loadData(selectedImageData: Data?) async {
         if let data = selectedImageData, let uiImage = UIImage(data: data) {
-            await Task.detached(priority: .high) {
+//           await Task.detached(priority: .high) {
                 let cartoonizer = Cartoonizer(modelName: modelName)
+                let start = CFAbsoluteTimeGetCurrent()
                 let result = cartoonizer.inference(image: uiImage)
-                DispatchQueue.main.async {
-                    self.outputImage = result
-                }
-            }
+                let end = CFAbsoluteTimeGetCurrent()
+            print("Inference time is \(end-start)")
+                 self.outputImage = result
+//               DispatchQueue.main.async {
+//                    self.outputImage = result
+//                }
+//            }
         }
     }
 }
