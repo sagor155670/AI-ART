@@ -146,7 +146,7 @@ struct DownloadAndSaveView: View{
                 let start = CFAbsoluteTimeGetCurrent()
                 let result = cartoonizer.inference(image: uiImage)
                 let end = CFAbsoluteTimeGetCurrent()
-            print("Inference time is \(end-start)")
+                print("Inference time is \(end-start)")
                  self.outputImage = result
 //               DispatchQueue.main.async {
 //                    self.outputImage = result

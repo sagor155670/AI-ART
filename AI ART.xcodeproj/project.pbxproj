@@ -55,6 +55,7 @@
 		1C667E452AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E292AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA.mlmodel */; };
 		1C667E462AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.9.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E2A2AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.9.mlmodel */; };
 		1C667E472AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1C667E2B2AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth2.mlmodel */; };
+		1C7140FC2ADD087200B80779 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7140FB2ADD087200B80779 /* SettingView.swift */; };
 		1C829C592AC961A200DAB418 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C829C582AC961A200DAB418 /* ImageData.swift */; };
 		1C8385CB2AD51DAD00F9F8A4 /* DownloadAndSaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8385CA2AD51DAD00F9F8A4 /* DownloadAndSaveView.swift */; };
 		1C8CAF7A2ACC485300587BB8 /* PhotoPickerModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CAF792ACC485300587BB8 /* PhotoPickerModalView.swift */; };
@@ -122,6 +123,7 @@
 		1C667E292AD6AF6B001CCD2D /* AnimeGANv3_tiny_USA.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_tiny_USA.mlmodel; sourceTree = "<group>"; };
 		1C667E2A2AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.9.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_Disney_v1.9.mlmodel; sourceTree = "<group>"; };
 		1C667E2B2AD6AF6B001CCD2D /* AnimeGANv3_light_Nordic_myth2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv3_light_Nordic_myth2.mlmodel; sourceTree = "<group>"; };
+		1C7140FB2ADD087200B80779 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		1C829C582AC961A200DAB418 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		1C8385CA2AD51DAD00F9F8A4 /* DownloadAndSaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAndSaveView.swift; sourceTree = "<group>"; };
 		1C8CAF792ACC485300587BB8 /* PhotoPickerModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerModalView.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				1CB9CC092ABAEDB000B222F5 /* AvatarsView.swift */,
 				1CB9CBFB2ABAC42C00B222F5 /* AI_ARTApp.swift */,
 				1CB9CC112ABAFB4800B222F5 /* MainView.swift */,
+				1C7140FB2ADD087200B80779 /* SettingView.swift */,
 				1CB9CC0D2ABAFAA300B222F5 /* SelfieView.swift */,
 				1CB9CC152ABB030000B222F5 /* SubtitleView.swift */,
 				1CB9CC172ABB0DDD00B222F5 /* ImageRowView.swift */,
@@ -369,6 +372,7 @@
 				1C667E342AD6AF6B001CCD2D /* AnimeGANv3_light_Trump_v1.9.mlmodel in Sources */,
 				1C667E362AD6AF6B001CCD2D /* AnimeGANv3_Disney_v1.7.mlmodel in Sources */,
 				1C667E302AD6AF6B001CCD2D /* AnimeGANv3_light_USA.mlmodel in Sources */,
+				1C7140FC2ADD087200B80779 /* SettingView.swift in Sources */,
 				1C667E0E2AD6AEA6001CCD2D /* CVPixelBuffer+Rotate.swift in Sources */,
 				1C667E3C2AD6AF6B001CCD2D /* AnimeGANv3_light_USA2.mlmodel in Sources */,
 				1C667E2E2AD6AF6B001CCD2D /* AnimeGANv3_Trump_v1.6.mlmodel in Sources */,

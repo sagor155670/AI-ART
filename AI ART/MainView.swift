@@ -11,7 +11,11 @@ struct MainView: View {
     @StateObject var data = DataModel()
     var body: some View {
         TabView {
-           
+            SelfieView(data: data)
+                .tabItem {
+                    Label("AI Selfies", systemImage: "face.smiling")
+                }
+
             AvatarsView()
                 .tabItem {
                     Label("Avatars", systemImage: "person.fill.viewfinder")
@@ -23,10 +27,6 @@ struct MainView: View {
             AvatarsView()
                 .tabItem {
                     Label("Videos", systemImage: "play.rectangle")
-                }
-            SelfieView(data: data)
-                .tabItem {
-                    Label("AI Selfies", systemImage: "face.smiling")
                 }
         }
     }

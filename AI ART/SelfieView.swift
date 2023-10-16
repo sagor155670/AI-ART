@@ -13,6 +13,7 @@ struct SelfieView: View {
     @State var isShowingPhotoPicker:Bool = false
     @State var isIncreasing = true
     @State var selectedImageData:Data? = nil
+    @State var isShowingSettings:Bool = false
 //    var folders: [String] = ["StyleGANEX","VToonify_T","CartoonGan-tensorflow","DCT-Net","iNNfer"]
 
     var body: some View {
@@ -43,6 +44,12 @@ struct SelfieView: View {
                     PhotoPickerModalView(selectedImageData: $selectedImageData, isShowingPhotoPicker: $isShowingPhotoPicker)
                         .presentationDetents([.fraction(0.25)])
                         .presentationBackground(Color.clear)
+                        .transaction{ transaction in
+                            transaction.animation = nil
+                        }
+                }
+                .sheet(isPresented: $isShowingSettings){
+                    SettingView(isShowingSetting: $isShowingSettings)
                         .transaction{ transaction in
                             transaction.animation = nil
                         }
@@ -110,7 +117,12 @@ struct SelfieView: View {
                     }
                     
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Image(systemName: "gearshape.fill")
+                        Button{
+                            isShowingSettings.toggle()
+                        }label:{
+                            Image(systemName: "gearshape.fill")
+                                .foregroundColor(Color.black)
+                        }
                     }
                 }
             

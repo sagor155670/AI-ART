@@ -28,20 +28,20 @@ struct PhotoPickerModalView: View {
 //                    Text("Select Imge to view")
 //                }
                 
-                Button{
-                    
-                }label: {
-                    HStack {
-                        Image(systemName: "camera")
-                        Text("Camera")
-                            .foregroundColor(.black)
-                            .fontWeight(.medium)
-                            .fontDesign(.serif)
-                        
-                    }.frame(width: 350,height: 50)
-                        .background(Color.white.opacity(1.2))
-                        .padding(.bottom,-7)
-                }
+//                Button{
+//
+//                }label: {
+//                    HStack {
+//                        Image(systemName: "camera")
+//                        Text("Camera")
+//                            .foregroundColor(.black)
+//                            .fontWeight(.medium)
+//                            .fontDesign(.serif)
+//
+//                    }.frame(width: 350,height: 50)
+//                        .background(Color.white.opacity(1.2))
+//                        .padding(.bottom,-7)
+//                }
                     //                .padding(.bottom,-7)
                 
                 PhotosPicker(selection: $selectedImage, label: {
@@ -52,7 +52,7 @@ struct PhotoPickerModalView: View {
                                 .fontWeight(.medium)
                                 .fontDesign(.serif)
                             
-                        }   .frame(width: 350,height: 50)
+                        }   .frame(width: 350,height: 70)
                             .background(Color.white.opacity(1.2))
                             .padding(.bottom,-7)
 
