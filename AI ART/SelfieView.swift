@@ -19,6 +19,7 @@ struct SelfieView: View {
     var body: some View {
 
         NavigationStack {
+           
             
             ScrollView(.vertical){
                 
